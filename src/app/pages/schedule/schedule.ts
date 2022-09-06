@@ -11,6 +11,7 @@ import { StorageServiceService } from '../../services/storage-service.service';
   styleUrls: ['./schedule.scss'],
 })
 export class SchedulePage {
+  //test
   result: any = "";
   dateOfPic = '2019-05-17';
   finalData = []
