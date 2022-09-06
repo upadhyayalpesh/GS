@@ -1,0 +1,31 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Picture of the Day!</ion-title>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+ <ion-item>
+  <input type="date" id="date" name="date" [(ngModel)]="dateOfPic">
+  <ion-button (click) ="dateChange()">Search</ion-button>
+ 
+ </ion-item>
+    <ion-item>
+        <ion-img [src]="result.url"></ion-img>   
+      
+    </ion-item>
+    <ion-item lines="none">
+      <ion-text color="primary">
+        <h3>{{result.title}}</h3>
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text>{{result.explanation}}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-button (click) ="bookmarkItem()">{{bookmarkValue}}</ion-button>
+    </ion-item>
+</ion-content>
